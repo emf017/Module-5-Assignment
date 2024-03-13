@@ -1,0 +1,83 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Common style for menu items */
+.menu-item-chicken,
+.menu-item-beef,
+.menu-item-sushi{
+  border: 5px white solid;
+  width: 33.33%;
+  float: left;
+  position: relative;
+  padding: 10px;
+  padding-top: 10px;
+  color: black;
+  background-color: #9999;
+}
+
+/* Title styles */
+.title-beef,
+.title-chicken,
+.title-sushi { 
+  color: white;
+  text-align: center;
+  width: 150px;
+  float: right;
+  font-weight: bold;
+  position: relative;
+  top: -30px;
+  left: 10px;
+}
+
+.title-beef { 
+  background-color: #CD5C5C;
+}
+
+.title-chicken {
+  color: black;
+  background-color: #FA8072;
+}
+
+.title-sushi {
+  color: black;
+  background-color: #F7DC6F;
+}
+
+/* Desktop devices */
+@media (min-width: 992px) {
+  .menu-item-chicken,
+  .menu-item-beef,
+  .menu-item-sushi {
+    width: 33.33%; /* Equal width for all three columns */
+  }
+}
+
+/* Tablet devices */
+@media (min-width: 768px) and (max-width: 991px) {
+  section:nth-child(1), section:nth-child(2) {
+    float: left;
+    width: 50%; /* Two columns taking 50% each */
+  }
+  section:nth-child(3) {
+    width: 100%; 
+    clear: both; /* Clear float for the third menu item */
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {
+  .menu-item-chicken,
+  .menu-item-beef,
+  .menu-item-sushi {
+    float: none;
+    width: 100%; /* Full width for all three sections */
+  }
+}
+
